@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1000</width>
+    <height>635</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Система учета прочитанной литературы</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_title">
+        <property name="text">
+         <string>Название книги:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="lineEdit_title"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_category">
+        <property name="text">
+         <string>Категория (жанр):</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QComboBox" name="comboBox_category">
+        <item>
+         <property name="text">
+          <string>Фантастика</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Фэнтези</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Детектив</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Роман</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Научная литература</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>История</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Биография</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Поэзия</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Триллер</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Приключения</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="label_rating">
+        <property name="text">
+         <string>Оценка:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QSpinBox" name="spinBox_rating">
+        <property name="minimum">
+         <number>1</number>
+        </property>
+        <property name="maximum">
+         <number>10</number>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="label_author">
+        <property name="text">
+         <string>Автор:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLineEdit" name="lineEdit_author"/>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="label_date">
+        <property name="text">
+         <string>Дата написания:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QDateEdit" name="dateEdit_date">
+        <property name="calendarPopup">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QLabel" name="label_difficulty">
+        <property name="text">
+         <string>Сложность:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1">
+       <widget class="QComboBox" name="comboBox_difficulty">
+        <item>
+         <property name="text">
+          <string>Легкая</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Средняя</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Сложная</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QTableWidget" name="tableWidget_books">
+      <property name="columnCount">
+       <number>7</number>
+      </property>
+      <property name="horizontalHeaderLabels" stdset="0">
+       <stringlist>
+        <string>Название</string>
+        <string>Категория</string>
+        <string>Оценка</string>
+        <string>Автор</string>
+        <string>Дата</string>
+        <string>Сложность</string>
+        <string>Статус</string>
+       </stringlist>
+      </property>
+      <column/>
+      <column/>
+      <column/>
+      <column/>
+      <column/>
+      <column/>
+      <column/>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_buttons">
+      <item>
+       <widget class="QPushButton" name="pushButton_add">
+        <property name="text">
+         <string>Добавить книгу</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_delete">
+        <property name="text">
+         <string>Удалить книгу</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_recommend">
+        <property name="text">
+         <string>Получить рекомендацию</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_buttons">
+      <item>
+       <widget class="QPushButton" name="pushButton_checked">
+        <property name="text">
+         <string>Пометить прочитанным</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_export">
+        <property name="text">
+         <string>Экспорт списка</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_import">
+        <property name="text">
+         <string>Импорт списка</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
