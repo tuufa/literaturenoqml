@@ -159,6 +159,9 @@
     </item>
     <item>
      <widget class="QTableWidget" name="tableWidget_books">
+      <property name="gridStyle">
+       <enum>Qt::SolidLine</enum>
+      </property>
       <property name="columnCount">
        <number>7</number>
       </property>
@@ -173,6 +176,36 @@
         <string>Статус</string>
        </stringlist>
       </property>
+      <attribute name="horizontalHeaderVisible">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="horizontalHeaderCascadingSectionResizes">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="horizontalHeaderMinimumSectionSize">
+       <number>30</number>
+      </attribute>
+      <attribute name="horizontalHeaderHighlightSections">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="horizontalHeaderStretchLastSection">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="verticalHeaderCascadingSectionResizes">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="verticalHeaderDefaultSectionSize">
+       <number>30</number>
+      </attribute>
+      <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="verticalHeaderStretchLastSection">
+       <bool>false</bool>
+      </attribute>
       <column/>
       <column/>
       <column/>
@@ -219,14 +252,14 @@
       <item>
        <widget class="QPushButton" name="pushButton_export">
         <property name="text">
-         <string>Экспорт списка</string>
+         <string>Прочитать список</string>
         </property>
        </widget>
       </item>
       <item>
        <widget class="QPushButton" name="pushButton_import">
         <property name="text">
-         <string>Импорт списка</string>
+         <string>Перенести в файл</string>
         </property>
        </widget>
       </item>

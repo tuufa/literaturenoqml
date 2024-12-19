@@ -32,6 +32,7 @@ private slots:
 private:
     Ui::MainWindow *ui;
 
+    void setupTable(QTableWidget *tableWidget_books);
     void createButtonHandlers();
     double cosineSimilarity(const QVector<double>& A, const QVector<double>& B);
 

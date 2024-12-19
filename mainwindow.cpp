@@ -10,14 +10,21 @@
 #include <QVector>
 #include <QMap>
 #include <cmath>
+#include <QTableWidget>
+#include <QHeaderView>
 
-
-MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
+MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    //setupTable(ui->tableWidget_books);
     createButtonHandlers();
+}
+
+void setupTable(QTableWidget *tableWidget_books)
+{
+    // Установить режим изменения размера столбцов
+    tableWidget_books->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
 }
 
 MainWindow::~MainWindow()

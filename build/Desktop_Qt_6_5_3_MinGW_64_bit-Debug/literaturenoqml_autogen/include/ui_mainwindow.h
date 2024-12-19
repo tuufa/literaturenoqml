@@ -149,7 +149,18 @@ public:
         if (tableWidget_books->columnCount() < 7)
             tableWidget_books->setColumnCount(7);
         tableWidget_books->setObjectName("tableWidget_books");
+        tableWidget_books->setGridStyle(Qt::SolidLine);
         tableWidget_books->setColumnCount(7);
+        tableWidget_books->horizontalHeader()->setVisible(true);
+        tableWidget_books->horizontalHeader()->setCascadingSectionResizes(false);
+        tableWidget_books->horizontalHeader()->setMinimumSectionSize(30);
+        tableWidget_books->horizontalHeader()->setHighlightSections(true);
+        tableWidget_books->horizontalHeader()->setProperty("showSortIndicator", QVariant(true));
+        tableWidget_books->horizontalHeader()->setStretchLastSection(false);
+        tableWidget_books->verticalHeader()->setCascadingSectionResizes(false);
+        tableWidget_books->verticalHeader()->setDefaultSectionSize(30);
+        tableWidget_books->verticalHeader()->setProperty("showSortIndicator", QVariant(false));
+        tableWidget_books->verticalHeader()->setStretchLastSection(false);
 
         verticalLayout->addWidget(tableWidget_books);
 
